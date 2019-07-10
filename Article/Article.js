@@ -112,3 +112,58 @@ const data = [
   Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new artible
 
 */
+
+data.map(item =>{
+  const articles = document.querySelector('.articles');
+  articles.appendChild(createArticle(item.title,item.date, item.firstParagraph, item.secondParagraph, item.thirdParagraph));
+  
+  
+  
+});
+
+
+function createArticle(title, date, firstParagraph,secondParagraph,thirdParagraph){
+  // creating elements
+  
+  const article = document.createElement('div');
+  const h2 = document.createElement('h2');
+  const para = document.createElement('p');
+  const para1 = document.createElement('p');
+  const para2 = document.createElement('p');
+  const para3 = document.createElement('p');
+  const articleButton = document.createElement('span');
+
+  // Setup structure of elements
+  article.appendChild(h2);
+  article.appendChild(para);
+  article.appendChild(para1);
+  article.appendChild(para2);
+  article.appendChild(para3);
+  article.appendChild(articleButton);
+
+
+  // Add classnames
+
+  article.classList.add('article');
+  para.classList.add('date');
+  articleButton.classList.add('expandButton');
+
+
+  // adding text
+
+  h2.textContent = title ;
+  para.textContent = date;
+  para1.textContent = firstParagraph;
+  para2.textContent = secondParagraph;
+  para3.textContent = thirdParagraph;
+
+  
+
+  articleButton.addEventListener('click', event =>{
+    console.log('clicked');
+    event.target.classList.toggle('article-open');
+    
+  });
+
+  return createArticle;
+}
