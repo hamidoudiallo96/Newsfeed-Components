@@ -34,6 +34,7 @@
 .header h1 {
   margin: 0;
   font-size: 48px;
+  position: relative;
 }
 .articles {
   margin-top: 95px;
