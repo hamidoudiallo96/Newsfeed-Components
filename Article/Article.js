@@ -85,7 +85,24 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+  {
+    title: 'Professional Software Development in 2019 DjangoCon',
+    date: 'Jan 1st, 2029',
+    firstParagraph: `Hodor hodor HODOR! Hodor hodor - hodor, hodor. Hodor hodor... Hodor hodor hodor; hodor hodor. Hodor hodor hodor, hodor, hodor
+          hodor. Hodor, hodor. Hodor. Hodor, hodor - hodor... Hodor hodor hodor; hodor HODOR hodor, hodor hodor?! Hodor hodor, hodor.
+          Hodor hodor hodor hodor hodor! Hodor hodor - HODOR hodor, hodor hodor hodor hodor hodor; hodor hodor? `,
+
+    secondParagraph: `Hodor, hodor. Hodor. Hodor, hodor, hodor. Hodor hodor, hodor. Hodor hodor, hodor, hodor hodor. Hodor! Hodor hodor, hodor;
+          hodor hodor hodor? Hodor, hodor. Hodor. Hodor, hodor - HODOR hodor, hodor hodor hodor! Hodor, hodor. Hodor. Hodor, HODOR
+          hodor, hodor hodor, hodor, hodor hodor. Hodor hodor - hodor - hodor... Hodor hodor hodor hodor hodor hodor hodor?! Hodor
+          hodor - hodor hodor hodor. Hodor. Hodor hodor... Hodor hodor hodor hodor hodor? Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur facere rem eum, iste eos aliquid magni quod totam? Repellat id veniam omnis doloribus ipsum laborum ullam laboriosam veritatis impedit atque!`,
+
+    thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
+          Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
+          Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur facere rem eum, iste eos aliquid magni quod totam? Repellat id veniam omnis doloribus ipsum laborum ullam laboriosam veritatis impedit atque!`
   }
+  
 ];
 
 /* Step 1: Create a function that creates a component. You will want your component to look like the template below: 
@@ -157,13 +174,19 @@ function createArticle(title, date, firstParagraph,secondParagraph,thirdParagrap
   para2.textContent = secondParagraph;
   para3.textContent = thirdParagraph;
   articleButton.textContent = "Expand";
+  articleButton.style.padding= "10px";
+  articleButton.style.color = "white";
+  articleButton.style.backgroundColor = "green";
+  articleButton.style.borderRadius = "20px";
 
   
 
   articleButton.addEventListener('click', event =>{
     console.log('clicked');
     article.classList.toggle('article-open');
-    
+    articleButton.style.color = "green";
+    articleButton.style.backgroundColor = "white";
+   
   });
 
   return article;
